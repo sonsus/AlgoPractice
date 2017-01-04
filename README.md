@@ -3,6 +3,7 @@ algorithm study started from 2nd.Jan.2017
 
 ###0104_ProjectEuler 52 (difficulty: easy)
 
+```python
 #!/bin/python3
 from time import time
 
@@ -29,3 +30,4 @@ if __name__=="__main__":
 	for i in range(1,7): print(res*i)
 	elapsed=time()-start
 	print("elapsed time is %s"%elapsed)
+```
