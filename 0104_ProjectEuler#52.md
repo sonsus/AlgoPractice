@@ -32,7 +32,7 @@ if __name__=="__main__":
 	print("elapsed time is %s"%elapsed)
 ```
 [output]
-142857 ~0.4s
+142857 ~0.25s
 
 ### charming short! charming fast!
 ```python
