@@ -29,7 +29,6 @@ prime_list=[2,3,5,7,11]
 res_list=[]
 cand=13
 while True:
-    #print(cand)
     if len(res_list)==11: break
     for ob in enumerate(prime_list):
         p=ob[1]
@@ -38,10 +37,8 @@ while True:
         elif ob[0]==len(prime_list)-1:
             prime_list.append(cand)
             if isTruncatable(cand,prime_list)==True: 
-                print(cand)
                 res_list.append(cand)
                 print(res_list)
-                #print(prime_list)
     cand+=2
 
 
