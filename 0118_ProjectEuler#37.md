@@ -6,12 +6,22 @@ Find the sum of the only eleven primes that are both truncatable from left to ri
 NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes.
 ````
 
-####Ans: ver1-exceeded time limit
-````python
 
+####Ans2:
+#####If a number is a composite, there must be a prime number lesser than sqrt("the number")
+
+Assume that there is a composite number which has two primes a,b that is larger than sqrt(the num)       
+a>sqrt(num)and b>sqrt(num)   --->   ab>sqrt(num)**2   <==> ab > num    (X)
+
+Therefore there is at least a prime <= sqrt(num) for any composite number
+
+
+````python
 #truncatable prime
 from math import sqrt
+from time import clock
 
+start=clock()
 
 def isTruncatable(prime,prime_list):
     str_p=str(prime)
@@ -34,11 +44,13 @@ while True:
         p=ob[1]
         if int(cand)%p==0: #int(cand/p)*p==cand:
             break
-        elif ob[0]==len(prime_list)-1:
+        elif ob[1]>sqrt(cand):
             prime_list.append(cand)
             if isTruncatable(cand,prime_list)==True: 
+                print(cand)
                 res_list.append(cand)
-                print(res_list)
+            break
+                
     cand+=2
 
 
@@ -46,9 +58,21 @@ res=0
 for nums in res_list:
     res+=nums
 print("the answer is %s"%res)
+print("elapsed time is %s s"%(clock()-start))
 ````
+####[output]
+23
+37
+53
+73
+313
+317
+373
+797
+3137
+3797
+739397
+the answer is 748317
+elapsed time is 92.26551326914299 s
 
-####Ans2:
-If a number is a composite, there must be a prime number lesser than sqrt("the number")
 
---> reducing search time
