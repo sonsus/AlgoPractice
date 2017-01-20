@@ -7,7 +7,7 @@ NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes.
 ````
 
 
-####Ans2:
+####Ans:
 #####If a number is composite, there must be a prime number lesser than sqrt("the number")
 
 Assume that there is a composite number which has two primes a,b that is larger than sqrt(the num)       
@@ -27,6 +27,7 @@ def isTruncatable(prime,prime_list):
     str_p=str(prime)
     l=len(str_p)
     if str_p[0]==1 or str_p[-1]==1: return False
+    elif '5' in str_p[1:-1]: return False
     else:
         for i in range(l):
             if int(str_p[i:]) not in prime_list: return False
@@ -73,5 +74,5 @@ print("elapsed time is %s s"%(clock()-start))
 3797  
 739397  
 the answer is 748317  
-elapsed time is 92.26551326914299 s  
+elapsed time is 62.343499822498494 s 
 
