@@ -8,7 +8,7 @@ NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes.
 
 
 ####Ans2:
-#####If a number is a composite, there must be a prime number lesser than sqrt("the number")
+#####If a number is composite, there must be a prime number lesser than sqrt("the number")
 
 Assume that there is a composite number which has two primes a,b that is larger than sqrt(the num)       
 a>sqrt(num)and b>sqrt(num)   --->   ab>sqrt(num)**2   <==> ab > num    (X)
@@ -61,18 +61,17 @@ print("the answer is %s"%res)
 print("elapsed time is %s s"%(clock()-start))
 ````
 ####[output]
-23
-37
-53
-73
-313
-317
-373
-797
-3137
-3797
-739397
-the answer is 748317
-elapsed time is 92.26551326914299 s
-
+23  
+37  
+53  
+73  
+313  
+317  
+373  
+797  
+3137  
+3797  
+739397  
+the answer is 748317  
+elapsed time is 92.26551326914299 s  
 
